@@ -48,10 +48,10 @@
 .ray {
   clip-path:polygon(0% 45%, 100% 0%, 100% 100%, 0% 55%);
   transition: 4s;
-transform: translateY(50%) translateX(50%) rotate(var(--angle)) translateY(-50%) translateX(-50%) translateY(50%) scaleX(-.75); 
+transform: translateY(50%) translateX(50%) rotate(var(--angle)) translateY(-50%) translateX(-50%) translateY(50%) scaleX(-1); 
   position: fixed;
-  bottom: -20rem;
-  width: 100vw;
+  bottom: -5rem;
+  width: 100vh;
   height: 100px;
   background: linear-gradient(0.25turn,rgba(229,229,229,0.5), rgba(250,250,250,0));
   z-index: -9;
@@ -60,23 +60,54 @@ transform: translateY(50%) translateX(50%) rotate(var(--angle)) translateY(-50%)
 .light1, .light2, .light3, .light4 {
   animation-timing-function: ease;
   animation-iteration-count: infinite;
-  width: 100vh;
 }
 
 .light1 > .ray {
-  left: -80%;
+  left: -80vh;
 }
 
 .light2 > .ray {
-  left: -78%;
+  left: -70vh;
 }
 
-.light3 > .ray {
-  left: -22%;
+.light3 {
+  visibility: hidden;
 }
 
-.light4 > .ray {
-  left: -20%;
+.light4 {
+  visibility: hidden;
+}
+
+@media (min-width: 769px) {
+  .ray {
+    clip-path:polygon(0% 45%, 100% 0%, 100% 100%, 0% 55%);
+    transition: 4s;
+  transform: translateY(50%) translateX(50%) rotate(var(--angle)) translateY(-50%) translateX(-50%) translateY(50%) scaleX(-.75); 
+    position: fixed;
+    bottom: -10rem;
+    width: 100vw;
+    height: 100px;
+    background: linear-gradient(0.25turn,rgba(229,229,229,0.5), rgba(250,250,250,0));
+    z-index: -9;
+  }
+
+  .light1 > .ray {
+    left: -80%;
+  }
+  
+  .light2 > .ray {
+    left: -78%;
+  }
+  
+  .light3 > .ray {
+    visibility: visible;
+    left: -22%;
+  }
+  
+  .light4 > .ray {
+    visibility: visible;
+    left: -20%;
+  }
 }
 
 
