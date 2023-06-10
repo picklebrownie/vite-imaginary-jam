@@ -1,0 +1,153 @@
+.wrapper { 
+  height: 100%;
+  width: 100%;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  background: linear-gradient(124deg, 
+  #facc15, 
+  #4ade80, 
+  #22d3ee, 
+  #2563eb, 
+  #a855f7, 
+  #ec4899,
+  #fb7185, 
+  #f97316);
+  background-size: 1800% 1800%;
+  z-index: -10;
+
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+.ray {
+  clip-path:polygon(0% 45%, 100% 0%, 100% 100%, 0% 55%);
+  transition: 4s;
+transform: translateY(50%) translateX(50%) rotate(var(--angle)) translateY(-50%) translateX(-50%) translateY(50%) scaleX(-.75); 
+  position: fixed;
+  bottom: -20rem;
+  width: 100vw;
+  height: 100px;
+  background: linear-gradient(0.25turn,rgba(229,229,229,0.5), rgba(250,250,250,0));
+  z-index: -9;
+}
+
+.light1, .light2, .light3, .light4 {
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  width: 100vh;
+}
+
+.light1 > .ray {
+  left: -80%;
+}
+
+.light2 > .ray {
+  left: -78%;
+}
+
+.light3 > .ray {
+  left: -22%;
+}
+
+.light4 > .ray {
+  left: -20%;
+}
+
+
+.light1 {
+  animation-duration: 10s;
+  animation-name: wave1;
+}
+
+.light2 {
+  animation-duration: 10s;
+  animation-name: wave2;
+}
+
+.light3 {
+  animation-duration: 10s;
+  animation-name: wave3;
+}
+
+.light4 {
+  animation-duration: 10s;
+  animation-name: wave4;
+}
+
+
+@keyframes wave1 {
+  0% {
+    --angle: 85deg;
+  }
+  50% {
+    --angle: 75deg;
+  }
+  100% {
+    --angle: 105deg;
+  }
+}
+
+@keyframes wave2 {
+  0% {
+    --angle: 70deg;
+  }
+  
+  50% {
+    --angle: 125deg;
+  }
+  100% {
+    --angle: 85deg;
+  }
+}
+
+@keyframes wave3 {
+  0% {
+    --angle: 110deg;
+  }
+  
+  50% {
+    --angle: 55deg;
+  }
+  100% {
+    --angle: 95deg;
+  }
+}
+
+@keyframes wave4 {
+  0% {
+    --angle: 95deg;
+  }
+  
+  50% {
+    --angle: 105deg;
+  }
+  100% {
+    --angle: 75deg;
+  }
+}
